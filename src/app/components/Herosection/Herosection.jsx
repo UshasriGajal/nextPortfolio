@@ -117,10 +117,12 @@ const Herosection = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled || mobileMenuOpen ? "shadow-lg" : "bg-transparent"
         }`}
-        style={{
-          backgroundColor: scrolled || mobileMenuOpen ? "rgba(0, 70, 67, 0.95)" : "transparent",
-          backdropFilter: scrolled || mobileMenuOpen ? "blur(12px)" : "none",
-        }}
+        scrolled style={{
+  background: scrolled || mobileMenuOpen 
+    ? "linear-gradient(to bottom right, #0F2027, #203A43, #2C5364)" 
+    : "transparent",
+  backdropFilter: scrolled || mobileMenuOpen ? "blur(12px)" : "none",
+}}
       >
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">

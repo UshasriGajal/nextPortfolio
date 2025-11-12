@@ -12,7 +12,7 @@ const LandingPage = () => {
     <div 
       className="landing-scroll-container"
       style={{ 
-        background: 'linear-gradient(to bottom right, #001E1D, #004643, #001E1D)',
+        background: 'linear-gradient(to bottom right, #0F2027, #203A43, #2C5364)',
         height: '100vh',
         overflowY: 'auto',
         scrollBehavior: 'smooth'
