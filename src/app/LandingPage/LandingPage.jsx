@@ -1,12 +1,50 @@
 import React from 'react'
 import Herosection from '../components/Herosection/Herosection'
 import About from '../components/About/About'
+import Skills from '../components/Skills/Skills'
+import Contact from '../components/Contact/Contact'
+import Projects from '../components/Projects/Projects'
+import Experience from '../components/Experience/Experience'
+import Scrolling from '../components/Scrolling/Scrolling'
 
 const LandingPage = () => {
   return (
-    <div>
-      <Herosection/>
-      <About/>
+    <div 
+      className="landing-scroll-container"
+      style={{ 
+        background: 'linear-gradient(to bottom right, #001E1D, #004643, #001E1D)',
+        height: '100vh',
+        overflowY: 'auto',
+        scrollBehavior: 'smooth'
+      }}
+    >
+      <div id="home">
+        <Herosection/>
+      </div>
+      
+      <div id="about">
+        <About/>
+      </div>
+
+      
+      
+      <Scrolling/>
+      
+      <div id="skills">
+        <Skills/>
+      </div>
+
+      
+      
+      
+      <div id="experience">
+        <Experience/>
+      </div>
+      
+      
+      <div id="contact">
+        <Contact/>
+      </div>
     </div>
   )
 }

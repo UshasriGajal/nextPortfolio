@@ -1,0 +1,62 @@
+.landing-container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* Remove snap for natural scrolling */
+}
+
+.section-slide {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* First section takes full viewport */
+.section-slide:first-child {
+  height: 100vh;
+}
+
+/* Subsequent sections can expand beyond viewport if content requires */
+.section-slide:not(:first-child) {
+  min-height: 100vh;
+  height: auto;
+}
+
+.section-content {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #fff; /* Ensure sections have background */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar for main container */
+.landing-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.landing-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.landing-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 70, 67, 0.5);
+  border-radius: 10px;
+}
+
+.landing-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 70, 67, 0.7);
+}
+
+/* Ensure body doesn't create extra scrollbars */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+html {
+  overflow: hidden;
+}
