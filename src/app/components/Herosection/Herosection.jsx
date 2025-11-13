@@ -497,19 +497,7 @@ const Herosection = () => {
           animation-delay: 4s;
         }
 
-        .bg-grid-pattern {
-          background-image: linear-gradient(
-              to right,
-              rgba(232, 228, 230, 0.1) 1px,
-              transparent 1px
-            ),
-            linear-gradient(
-              to bottom,
-              rgba(232, 228, 230, 0.1) 1px,
-              transparent 1px
-            );
-          background-size: 50px 50px;
-        }
+        
       `}</style>
     </div>
   );

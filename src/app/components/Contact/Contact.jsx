@@ -96,17 +96,7 @@ const Contact = () => {
       </div>
 
       {/* Decorative circles */}
-      <div className="absolute inset-0 opacity-5">
-        <svg width="100%" height="100%">
-          <defs>
-            <pattern id="circles" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-              <circle cx="40" cy="40" r="2" fill="#ABD1C6"/>
-              <circle cx="40" cy="40" r="20" fill="none" stroke="#ABD1C6" strokeWidth="1"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#circles)" />
-        </svg>
-      </div>
+      
 
       <div className="relative z-10 container mx-auto max-w-6xl w-full">
         {/* Main Title */}
