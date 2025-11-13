@@ -94,7 +94,7 @@ const Herosection = () => {
       external: true,
       link: "https://drive.google.com/file/d/1mMHLzcxPSMrptPZAFG9tPHp7rTWtqi-5/view?usp=sharing",
     },
-    { name: "PROJECTS", id: "experience" },
+    { name: "EXPERIENCE", id: "experience" },
     { name: "CONTACT", id: "contact" },
   ];
 
@@ -239,7 +239,7 @@ const Herosection = () => {
       </nav>
 
       {/* Hero Content - Added proper padding for mobile */}
-      <div className="relative z-10 container mx-auto px-6 pt-32 md:pt-28 lg:pt-16 pb-20 flex flex-col lg:flex-row items-center justify-between min-h-screen">
+      <div className="relative z-10 container mx-auto px-6 pt-32 md:pt-32 lg:pt-16 pb-20 flex flex-col lg:flex-row items-center justify-between min-h-screen">
         <div
           className={`lg:w-1/3 mb-12 ml-3 lg:mb-0 transition-all duration-1000 transform ${
             isVisible
@@ -257,9 +257,9 @@ const Herosection = () => {
               style={{ borderColor: "#ABD1C6" }}
             ></div>
 
-            <div className="relative w-80 h-90 rounded-3xl shadow-2xl overflow-hidden group">
+            <div className="relative w-68 md:w-80 h-72 md:h-90 rounded-3xl shadow-2xl overflow-hidden group">
               <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-300">
-                <Image src={myImage} alt="Ushasri Gajal" />
+                <Image className="" src={myImage} alt="Ushasri Gajal" />
               </div>
               <div
                 className="absolute inset-0 rounded-3xl border-4 border-transparent group-hover:border-opacity-100 transition-all duration-300"
@@ -378,7 +378,7 @@ const Herosection = () => {
                 background: "linear-gradient(to right, #004643, #ABD1C6)",
                 color: "#E8E4E6",
               }}
-              onClick={(e) => handleNavClick(e, "experience")}
+              onClick={(e) => handleNavClick(e, "projects")}
               onMouseEnter={(e) =>
                 (e.target.style.background =
                   "linear-gradient(to right, #003632, #9BC1B5)")

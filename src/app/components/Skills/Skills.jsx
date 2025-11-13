@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import html from "../../../assets/HTML5_Badge.png";
-import next from "../../../assets/next.js.png";
+import next from "../../../assets/nextjs-white-icon.png";
 import react from "../../../assets/React-icon.png";
 import javaScript from "../../../assets/javascript-seeklogo.com.svg";
 import tailwind from "../../../assets/Tailwind_CSS.png";
@@ -53,6 +53,7 @@ const Skills = () => {
     <div
       ref={sectionRef}
       className="min-h-screen relative overflow-hidden py-20 px-6"
+      
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -90,11 +91,6 @@ const Skills = () => {
           >
             Skills and Abilities
           </h2>
-          {/* <div className="flex gap-3 justify-center mt-6">
-            <div className="w-16 h-1 rounded-full animate-pulse" style={{ backgroundColor: '#F9BC60' }}></div>
-            <div className="w-16 h-1 rounded-full animate-pulse animation-delay-300" style={{ backgroundColor: '#ABD1C6' }}></div>
-            <div className="w-16 h-1 rounded-full animate-pulse animation-delay-600" style={{ backgroundColor: '#E8E4E6' }}></div>
-          </div> */}
         </div>
 
         {/* Skills Grid */}
@@ -102,7 +98,7 @@ const Skills = () => {
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className={`transition-all duration-700 transform ${
+              className={` transition-all duration-700 transform ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-20 opacity-0"
@@ -111,31 +107,21 @@ const Skills = () => {
               onMouseEnter={() => setHoveredSkill(index)}
               onMouseLeave={() => setHoveredSkill(null)}
             >
-              <div
-                className="relative rounded-xl p-6 transform transition-all duration-300 cursor-pointer group"
-                // style={{
-                //   background: hoveredSkill === index
-                //     ? 'linear-gradient(135deg, rgba(0, 70, 67, 0.4), rgba(171, 209, 198, 0.2))'
-                //     : 'rgba(0, 70, 67, 0.2)',
-                // backdropFilter: 'blur(12px)',
-                // border: '1px solid',
-                // borderColor: hoveredSkill === index ? skill.color : 'rgba(171, 209, 198, 0.3)',
-                // transform: hoveredSkill === index ? 'translateY(-8px) scale(1.02)' : 'translateY(0) scale(1)'
-                // }}
-              >
+              <div className="relative  rounded-xl p-6 transform transition-all duration-300 cursor-pointer group">
                 <div className="flex items-center gap-4">
-                  {/* Icon */}
+                  {/* Icon Placeholder */}
                   <Image
   src={skill.icon}
   alt={skill.name}
   width={56}
   height={56}
-  className="rounded-lg flex items-center justify-center text-2xl transition-all duration-300 shadow-lg"
+  className="rounded-lg flex items-center  justify-center text-2xl transition-all duration-300 "
   style={{ 
     
     transform: hoveredSkill === index ? 'rotate(10deg) scale(1.1)' : 'rotate(0deg) scale(1)',
   }}
 />
+
                   {/* Skill Name */}
                   <div className="flex-1">
                     <h3
@@ -145,54 +131,14 @@ const Skills = () => {
                       {skill.name}
                     </h3>
                     <div
-                      className="h-1 mt-2 rounded-full transition-all duration-500"
+                      className="h-1 mt-2 rounded-full transition-all duration-300 md:duration-500"
                       style={{
                         width: hoveredSkill === index ? "100%" : "60%",
                         background: `linear-gradient(to right, ${skill.color}, transparent)`,
                       }}
                     ></div>
                   </div>
-
-                  {/* Arrow Icon */}
-                  {/* <div 
-                    className="transition-all duration-300"
-                    style={{
-                      color: skill.color,
-                      transform: hoveredSkill === index ? 'translateX(4px)' : 'translateX(0)',
-                      opacity: hoveredSkill === index ? 1 : 0.5
-                    }}
-                  >
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M7 3L14 10L7 17" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div> */}
                 </div>
-
-                {/* Hover Glow Effect */}
-                {/* {hoveredSkill === index && (
-                  <div 
-                    className="absolute inset-0 rounded-xl opacity-20 blur-xl -z-10"
-                    style={{ backgroundColor: skill.color }}
-                  ></div>
-                )} */}
-
-                {/* Decorative Corner */}
-                {hoveredSkill === index && (
-                  <>
-                    <div
-                      className="absolute top-0 right-0 w-12 h-12 opacity-20 rounded-tr-xl"
-                      style={{
-                        background: `linear-gradient(135deg, ${skill.color}, transparent)`,
-                      }}
-                    ></div>
-                    <div
-                      className="absolute bottom-0 left-0 w-12 h-12 opacity-20 rounded-bl-xl"
-                      style={{
-                        background: `linear-gradient(315deg, ${skill.color}, transparent)`,
-                      }}
-                    ></div>
-                  </>
-                )}
               </div>
             </div>
           ))}

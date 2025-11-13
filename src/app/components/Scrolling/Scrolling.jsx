@@ -6,7 +6,7 @@ const Scrolling = () => {
     'Web development',
     'Git & GitHub',
     'Responsiveness',
-    'Frontend Deployment (Vercel, Netlify)',
+    'Frontend Deployment (Vercel, Digital Ocean)',
     'RESTful APIs',
     'Axios / Fetch API',
   ];
@@ -73,7 +73,7 @@ const Scrolling = () => {
         }
 
         .animate-scroll {
-          animation: scroll 15s linear infinite;
+          animation: scroll 10s linear infinite;
         }
 
         .animate-scroll-mobile {
@@ -90,7 +90,7 @@ const Scrolling = () => {
 
         @media (min-width: 768px) {
           .animate-scroll-mobile {
-            animation: scroll 15s linear infinite;
+            animation: scroll 10s linear infinite;
           }
         }
       `}</style>

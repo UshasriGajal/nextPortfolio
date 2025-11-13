@@ -81,8 +81,7 @@ const Contact = () => {
   return (
     <div 
       ref={sectionRef}
-      className="min-h-screen relative overflow-hidden py-20 px-6 flex items-center"
-      
+      className="min-h-screen relative overflow-hidden py-12 px-4 sm:py-20 sm:px-6 flex items-center"
     >
       {/* Animated background gradients */}
       <div className="absolute inset-0">
@@ -105,24 +104,22 @@ const Contact = () => {
               <circle cx="40" cy="40" r="20" fill="none" stroke="#ABD1C6" strokeWidth="1"/>
             </pattern>
           </defs>
-          {/* <rect width="100%" height="100%" fill="url(#circles)" /> */}
-          <rect width="100%" height="100%" fill="url(#hexagons)" />
-
+          <rect width="100%" height="100%" fill="url(#circles)" />
         </svg>
       </div>
 
-      <div className="relative z-10 container mx-auto max-w-6xl">
+      <div className="relative z-10 container mx-auto max-w-6xl w-full">
         {/* Main Title */}
-        <div className={`text-center mb-10 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`text-center mb-8 sm:mb-10 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 
-            className="text-4xl md:text-4xl font-black mb-6 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6 tracking-tight px-4"
             style={{ color: '#E8E4E6' }}
           >
             LET'S CONNECT
           </h2>
           
           <p 
-            className="text-xl md:text-2xl font-light"
+            className="text-lg sm:text-xl md:text-2xl font-light px-4"
             style={{ color: '#ABD1C6' }}
           >
             I'm always excited to collaborate on new projects
@@ -130,7 +127,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Information - List Style */}
-        <div className="mb-10 max-w-4xl mx-auto">
+        <div className="mb-8 sm:mb-10 max-w-4xl mx-auto px-2 sm:px-4">
           {contactInfo.map((contact, index) => (
             <div
               key={index}
@@ -154,10 +151,10 @@ const Contact = () => {
         </div>
 
         {/* Social Links - Horizontal Bar */}
-        <div className={`transition-all duration-1000 delay-600 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-          <div className="text-center mb-8">
+        <div className={`transition-all duration-1000 delay-600 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'} px-4`}>
+          <div className="text-center mb-6 sm:mb-8">
             <h3 
-              className="text-3xl md:text-4xl font-black inline-block relative"
+              className="text-2xl sm:text-3xl md:text-4xl font-black inline-block relative"
               style={{ color: '#E8E4E6' }}
             >
               FIND ME ON
@@ -168,11 +165,13 @@ const Contact = () => {
             </h3>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-16">
             {socialLinks.map((social, index) => (
               <a
                 key={index}
                 href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative flex flex-col items-center"
                 onMouseEnter={() => setActiveItem(`social-${index}`)}
                 onMouseLeave={() => setActiveItem(null)}
@@ -180,7 +179,7 @@ const Contact = () => {
                 <div className="relative">
                   {/* Icon Circle */}
                   <div 
-                    className="w-24 h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center text-5xl transform transition-all duration-500 group-hover:scale-110 relative"
+                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center text-4xl sm:text-5xl transform transition-all duration-500 group-hover:scale-110 relative"
                     style={{ 
                       backgroundColor: activeItem === `social-${index}` ? social.color : 'transparent',
                       border: `3px solid ${social.color}`,
@@ -204,9 +203,9 @@ const Contact = () => {
                 </div>
 
                 {/* Label */}
-                <div className="mt-4 text-center">
+                <div className="mt-3 sm:mt-4 text-center">
                   <p 
-                    className="font-black text-lg tracking-wider transition-colors duration-300"
+                    className="font-black text-base sm:text-lg tracking-wider transition-colors duration-300"
                     style={{ 
                       color: activeItem === `social-${index}` ? social.color : '#ABD1C6'
                     }}
@@ -214,7 +213,7 @@ const Contact = () => {
                     {social.name}
                   </p>
                   <p 
-                    className="text-sm mt-1 opacity-70"
+                    className="text-xs sm:text-sm mt-1 opacity-70"
                     style={{ color: '#E8E4E6' }}
                   >
                     @{social.username}
@@ -233,19 +232,6 @@ const Contact = () => {
             ))}
           </div>
         </div>
-
-        {/* Floating decorative elements */}
-        {/* <div 
-          className="absolute top-20 right-12 w-20 h-20 opacity-20 animate-float blur-sm"
-          style={{ 
-            backgroundColor: '#E16162',
-            clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)'
-          }}
-        ></div>
-        <div 
-          className="absolute bottom-20 left-12 w-16 h-16 rounded-full opacity-20 animate-float animation-delay-3000 blur-sm"
-          style={{ backgroundColor: '#ABD1C6' }}
-        ></div> */}
       </div>
 
       <style jsx>{`
@@ -298,16 +284,16 @@ const Contact = () => {
 const ContactItem = ({ contact, isActive }) => {
   return (
     <div 
-      className="group relative py-4 border-b-2 transition-all duration-500 flex items-center justify-between"
+      className="group relative py-4 border-b-2 transition-all duration-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4"
       style={{ 
         borderColor: isActive ? contact.color : 'rgba(171, 209, 198, 0.3)'
       }}
     >
       {/* Left side - Icon and Label */}
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-3 min-w-0 flex-1">
         {/* Icon */}
         <div 
-          className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center text-3xl md:text-4xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 relative"
+          className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 relative flex-shrink-0"
           style={{ 
             backgroundColor: isActive ? contact.color : 'transparent',
             border: `2px solid ${contact.color}`,
@@ -318,15 +304,15 @@ const ContactItem = ({ contact, isActive }) => {
         </div>
 
         {/* Title and Value */}
-        <div>
+        <div className="min-w-0 flex-1">
           <p 
-            className="text-sm md:text-sm font-bold tracking-widest mb-2"
+            className="text-xs sm:text-sm font-bold tracking-widest mb-1 sm:mb-2"
             style={{ color: contact.color }}
           >
             {contact.label}
           </p>
           <h3 
-            className="text-2xl md:text-3xl font-black tracking-tight transition-colors duration-300"
+            className="text-base sm:text-lg md:text-2xl lg:text-2xl font-black tracking-tight transition-colors duration-300"
             style={{ 
               color: isActive ? '#E8E4E6' : '#ABD1C6'
             }}
@@ -337,9 +323,9 @@ const ContactItem = ({ contact, isActive }) => {
       </div>
 
       {/* Right side - Value */}
-      <div className="text-right">
+      <div className="text-left sm:text-right pl-14 sm:pl-0 min-w-0 flex-shrink-0 w-full sm:w-auto">
         <p 
-          className="text-lg md:text-2xl font-bold transition-all duration-300"
+          className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold transition-all duration-300 break-all sm:break-normal"
           style={{ 
             color: isActive ? contact.color : '#E8E4E6',
             opacity: isActive ? 1 : 0.7

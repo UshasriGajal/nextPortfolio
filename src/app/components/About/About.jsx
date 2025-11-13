@@ -60,12 +60,7 @@ const EducationTimeline = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-12 text-center md:mb-16">
-          <div className="inline-block px-4 md:px-6 py-2 rounded-full mb-4" style={{ 
-            backgroundColor: 'rgba(249, 188, 96, 0.15)',
-            backdropFilter: 'blur(4px)'
-          }}>
-            <span className="text-xs md:text-sm font-semibold" style={{ color: '#F9BC60' }}>Timeline</span>
-          </div>
+          
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ 
             backgroundImage: 'linear-gradient(to right, #F9BC60, #ABD1C6)',
             backgroundClip: 'text',
