@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import myImage from "../../../assets/myImage.jpeg";
+import myImage from "../../../assets/ushaImage.jpeg";
 
 const Herosection = () => {
   const [isVisible, setIsVisible] = useState(false);
